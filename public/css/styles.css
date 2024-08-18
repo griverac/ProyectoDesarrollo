@@ -1,0 +1,268 @@
+/* Estilos Generales */
+body {
+    background-color: #f0f8ff;
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el relleno por defecto */
+    height: 100%;
+    padding-top: 70px; /* no ocultar contenido */
+}
+
+/* Estilo para la barra de navegación fija */
+.navbar {
+    background-color: #17118f; /* Color de la barra */
+    font-size: 18px; /* Tamaño de la letra */
+    padding: 0.5rem 1rem; /* Ajusta el padding */
+    position: fixed; /* Fija la barra en la parte superior */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    top: 0; /* Alinea al top */
+    z-index: 1030; /* Asegura que esté por encima del contenido */
+    font-family: 'Nanum Myeongjo', serif; 
+}
+
+/* Ajustes para el texto de la barra de navegación */
+.navbar-brand, .navbar-nav .nav-link {
+    color: white !important; /* Color de los enlaces y del texto del logo */
+    font-weight: bold; /* Negrita */
+    font-family: 'Nanum Myeongjo', serif; 
+
+}
+
+.navbar-brand {
+    font-size: 1.5rem; /* Tamaño del texto del logo */
+    font-weight: bold; /* Negrita */
+}
+
+.navbar-nav .nav-link {
+    margin-left: 20px; /* Espacio entre los elementos del menú */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #e6f2ff !important; /* Color al pasar el ratón */
+}
+
+.navbar .navbar-collapse {
+    justify-content: flex-end; /* Alinea el contenido del menú a la derecha */
+}
+
+/* Sección de Inicio */
+.inicio-bg {
+    background-image: url('/images/inicio-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    height: calc(100vh - 80px); /* Ajusta la altura para compensar el espacio de la barra de navegación */
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+/* Estilo para la sección Sobre Nosotros y Contacto */
+#sobre-nosotros, #contacto {
+    background-color: #f8f9fa;
+    padding-top: 100px; /* Asegura que la sección esté por debajo de la barra de navegación */
+}
+
+/* Estilos para botones */
+.btn-primary {
+    background-color: #17118f;
+    border: none;
+    font-family: 'Nanum Myeongjo', serif; 
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Ajustes para fuentes específicas */
+.display-4 {
+    font-family: 'Nanum Myeongjo', serif; 
+}
+
+/* Estilo para la sección Sobre Nosotros */
+.sobre-nosotros-bg {
+    background-image: url('/images/sobre-nosotros-bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 90vh; /* Asegura que la sección cubra toda la altura de la ventana */
+    padding: 60px 0; /* Espaciado superior e inferior */
+    color: white; /* Color del texto */
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+}
+
+.sobre-nosotros-bg .container {
+    text-align: center; /* Centra el texto en la sección */
+}
+
+.sobre-nosotros-bg h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'Nanum Myeongjo', serif; 
+}
+
+.sobre-nosotros-bg p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-family: 'Nanum Myeongjo', serif; 
+}
+
+/* Estilo para la sección Galería */
+.gallery-section {
+    background-color: #ffffff; 
+    color: #000; /* Color del texto */
+    padding: 40px 0; /* Ajusta el padding superior e inferior */
+    display: flex; /* Utiliza flexbox */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    flex-direction: column; /* Alinea los elementos en columna */
+}
+
+.gallery-section h2 {
+    font-family: 'Nanum Myeongjo', serif; /* Aplica la fuente deseada */
+    font-size: 2rem;
+    margin-bottom: 20px; /* Reduce el margen inferior */
+    text-align: center; /* Centra el título */
+}
+
+/* Ajusta el carrusel para que sea cuadrado */
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Asegura que ocupe el 100% del ancho disponible */
+}
+
+.carousel {
+    position: relative; /* Para ajustar el contenedor */
+    width: 40%; /* Ajusta el ancho del carrusel */
+    padding-top: 40%; /* aspecto cuadrado (ancho igual a la altura) */
+    overflow: hidden; /* Oculta  desbordamiento */
+}
+
+.carousel-inner {
+    position: absolute; /* que el contenido no se salga */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%; /* cubrir el contenedor */
+    object-fit: cover; /* imagen proporcional dentro del contenedor */
+}
+
+
+/* Ajustes para las imágenes de control */
+.carousel-control-icon {
+    width: 40px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 40px; /* mantener proporciones */
+    object-fit: contain; /* ajuste dentro del contenedor sin deformarse */
+}
+
+/* Centrado vertical de los controles */
+.carousel-control-prev, .carousel-control-next {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10%;
+}
+
+/*imagenes tamaño 736*736*/
+.carousel-control-prev {
+    left: -0%;
+}
+
+.carousel-control-next {
+    right: -0%;
+}
+
+/* Estilo para la sección de contacto */
+#contacto {
+    background-color: #f8f9fa; /* Fondo de la sección */
+    padding: 60px 0; /* Aumenta el padding superior e inferior */
+    margin-top: 40px; /* Agrega un margen superior para separar de la sección anterior */
+}
+
+/* Ajustes para el formulario de contacto */
+#contacto .form-control {
+    border-radius: 0.25rem; /* Ajusta los bordes del formulario */
+}
+
+#contacto .btn-primary {
+    border-radius: 0.25rem; /* Ajusta los bordes del botón */
+    font-size: 1rem; /* Ajusta el tamaño de la fuente del botón */
+    padding: 10px 20px; /* Ajusta el padding del botón */
+}
+
+/* Estilo para la sección de Información y Mapa */
+.info-mapa-section {
+    background-color: #17118f; /* Fondo azul */
+    color: #ffffff; /* Texto en blanco */
+    padding: 60px 0; /* Padding superior e inferior */
+}
+
+.info-mapa-section h4 {
+    font-family: 'Nanum Myeongjo', serif;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Asegura que ocupen todo el espacio disponible */
+}
+
+.social-icons a {
+    margin-bottom: 15px; /* Espacio entre los íconos */
+    font-size: 1.5rem; /* Tamaño de los íconos */
+    color: white; /* Color de los íconos */
+}
+
+.social-icons a:hover {
+    color: #e6f2ff; /* Color al pasar el ratón */
+}
+
+.map-container iframe {
+    border: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilo para la sección de Servicios */
+#servicios {
+    background-color: #f8f9fa; /* Fondo gris claro */
+    color: #000; /* Color del texto */
+    padding: 40px 0; /*relleno superior e inferior */
+}
+
+.service-box {
+    background-color: #ffffff; /* Fondo blanco para cada caja de servicio */
+    border: 1px solid #e0e0e0; /* Borde ligero */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin-bottom: 20px; /* Espacio debajo de cada caja */
+    padding: 20px; /* relleno interno */
+}
+
+.service-box i {
+    color: #17118f; /* Color del ícono */
+    font-size: 2rem; /* Tamaño del ícono */
+}
+
+.service-box h3 {
+    font-family: 'Nanum Myeongjo', serif; /* Fuente (de los deseos) para los títulos */
+    font-size: 1.5rem;
+    margin-bottom: 20px; /* Aumenta el espacio debajo del título */
+}
+
+.service-box p {
+    font-size: 1rem; /* Tamaño del texto de la descripción */
+}
